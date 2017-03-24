@@ -1,0 +1,8 @@
+Create a Billing Alarm - Lab
+
+* create an alarm when AWS account goes over $10 month, sends you an email alert. Then you can delete your AWS assets (if you forget to shut down services).
+
+* under name (top right) > My Billing Dashboard
+
+* Alerts & Notifications > Monitor your estimated charges. Enable Now to begin setting billing alerts that automatically e-mail you when charges reach a threshold you define.
+
