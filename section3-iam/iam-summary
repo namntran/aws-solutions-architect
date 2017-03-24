@@ -1,0 +1,25 @@
+Identity Access Management 101 Summary
+
+What have we learnt so far?
+
+* IAM consists of the following:
+  - Users
+  - Groups (a way to group users and apply policies collectively)
+  - Roles
+  - Policy Documents (json, key value pairs: attributes, value)
+
+* IAM is universal, does not apply to regions
+
+* the 'root account' is the account created when first setup your AWS account. It has complete admin access
+
+* new users have no permission when first created
+
+* new users are assigned Access Key ID & Secret Access Keys when first created
+
+* These are not the same as a password, and you can't use the Access Key ID & Secret Access Key to Login to the console. You can use this to access AWS via the APIs and command line.
+
+* you only get to view credentials one. If you lose them, you have to regenerate them. So save them in a secure location.
+
+* always set up multifactor authentication on your root account
+
+* you can create and customise your own password rotation policies.
