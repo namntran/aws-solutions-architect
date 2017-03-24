@@ -1,3 +1,22 @@
 Identity Access Management 101
 
-No region - IAM is global
+* No region - IAM is global
+
+* Essentially, IAM allows you to manage users and their level of access to the AWS console. It is important to understand IAM and how it works, both for the exam and for administrating to companies AWS account in real life.
+
+What does IAM give you?
+* Centralised control of your AWS account
+* Shared access to your AWS account to invite other users
+* Granular permissions to specific users, specific services, specific levels of access
+* Identity federation - single sign on (SSO) - (including active directory, Facebook, LinkedIn, Gmail etc)
+* Multifactor Authentication - secure your AWS for root account
+* Provide temporary access for users/ devices and services where necessary
+* Allows you to set up your own password rotation policy
+* Integrates with many different AWS services
+* Supports PCI DSS compliance (handles online payments or storing credit card details)
+
+Critical terms
+* Users - end users (people)
+* Groups - a colleciton of users under one set of permissions (HR, Finance, Dev)
+* Roles - create roles and assign them to AWS resources
+* Policies - assign document to users, groups, roles (permissions)
