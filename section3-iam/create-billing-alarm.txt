@@ -6,3 +6,8 @@ Create a Billing Alarm - Lab
 
 * Alerts & Notifications > Monitor your estimated charges. Enable Now to begin setting billing alerts that automatically e-mail you when charges reach a threshold you define.
 
+* tick second check box option - 'Receive Billing Alerts'
+
+* select 'Manage Billing Alerts' hyperlink
+
+* select 'Billing' - left menu navigation bar > Alarms
