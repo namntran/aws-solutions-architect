@@ -1,0 +1,91 @@
+S3 101
+
+* S3 stands for Simple Storage Service
+
+* provides developers and IT teams with secure, durable, highly-scalable object storage. Amazon S3 is easy to use, with a simple web services interface to store and retrieve any amount of data from anywhere on the web
+
+* is a safe place to store files
+
+* object based storage (videos, photos, pdf, word documents - flat files vs block based - operating system or database)
+
+* data is spread across multiple devices and facilities to withstand failure
+
+* cloudberry labs - windows file explorer for S3 https://www.cloudberrylab.com/explorer/amazon-s3.aspx
+
+* S3 is object based i.e. allows you to upload files
+
+* files can be from 0 bytes to 5 TB
+
+* unlimited storage
+
+* files are stored in buckets
+
+* S3 is universal namespace, names must be unique globally
+
+* buckets - region then bucket names
+
+* when you upload a file to S3 you will receive a HTTP 200 code if upload was successful
+
+Data Consistency Model for S3
+
+* read after write consistency for PUTS of new objects (immediately read an object on update)
+
+* eventual consistency for overwrite PUTS and DELETES (updating an object can take some time to propogate)
+
+* updates are atomic - get new or old version, not corrupted data
+
+S3 is a simple key, value store
+
+* S3 is object based. Objects consist of the following:
+  - key (file name of object)
+  - value (data made up of bytes)
+  - version ID (versioning)
+  - metadata (data about data)
+  - subresources 
+    * access control lists (fine grain permissions, objects, files, buckets)
+    * Torrent
+
+* Amazon SLA guarantee S3 built for 99.99% availability
+
+* 11 X 9s durability for S3 informations
+
+* tiered storage available
+
+* lifecycle management
+
+* versioning (one object with multiple versions)
+
+* encryption
+
+* secure data using access control lists and bucket policies
+
+Storage Tiers
+
+* S3 - 99.99% availability, 11 x 9s durability, stored redundantly across multiple devices in multiple facilities and is designed to sustain the loss of 2 facilities concurrently
+
+* S3 - IA (Infrequently Accessed)for data that is accessed less frequently (e.g payroll data/ wage slips needed at year end), but requires rapid access when needed. Lower fee than S3, but you are charged a retrieval fee
+
+* RRS - Reduced Redundancy Storage - designed to provide 99.99% durability and availability of objects (e.g data that can be generated again, e.g thumbnails)
+
+* Glacier - very cheap, but used for archival only. It takes 3-5 hours to restore from Glacier.
+
+* Glacier is its own service - stores data for as little as $0.01 per gigabyte per month and is optimised for data that is infrequently accessed.
+
+S3 Charges
+  - storage
+  - requests
+  - storage management pricing (metadata)
+  - data transfer pricing
+  - transfer acceleration
+
+* Amazon S3 Transfer Acceleration - enables fast, easy and secure transfers of files over long distances between your end users and an S3 bucket. 
+
+*Transfer Acceleration takes advantage of Amazon CloudFront's globally distributed edge locations. As the data arrives at an edge location, data is routed to Amazon S3 over an optimised network path.
+
+*read the S3 FAQ https://aws.amazon.com/s3/faqs/
+
+
+
+
+
+
