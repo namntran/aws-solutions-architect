@@ -1,0 +1,27 @@
+Create S3 
+
+* bucket names are shared by all users
+
+PROPERTIES
+* versioning - different versions of different objects in the same bucket
+
+* static website hosting - S3 to host static website (plain html, no server side hosting - no PHP, serverless, no virtual machines/ EC2/ load balancing/ auto-scaling. Scales automatically, low cost.
+
+* logging - log reports, access requests
+
+* tagging buckets
+
+* cross region replication in different regions
+
+* configure events
+
+LIFECYCLE MANAGEMENT
+* tier off data to different storage types (IA, Glacier etc)
+
+PERMISSIONS
+* Access Control Lists - all buckets are private by default
+
+MANAGEMENT
+* Analytics
+* Metrics (storage, requests, data transfer)
+* Inventory (reports, subfolders)
