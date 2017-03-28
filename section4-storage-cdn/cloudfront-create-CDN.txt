@@ -1,0 +1,24 @@
+CloudFront Lab - Creating our CDN
+
+* > Network & Content Delivery
+
+* 2 different types of distributions - Web and RTMP (streaming files - flash)
+
+* create a web distribution.
+
+* fill in origin setting form
+
+* path pattern uses regular expression
+
+* Restrict Viewer Access (Use Signed URLs or Signed Cookies) - If you restrict viewer access, viewers must use CloudFront signed URLs or signed cookies to access your content e.g. staff need to sign in to access training videos.
+
+* AWS WAF Web ACL - Web Application Firewall
+
+* Alternate Domain Names (CNAMEs)- human readable names - need to upload SSL certificate
+
+* Logging - Select whether you want CloudFront to log all viewer requests for files in your distribution. You are charged for access logs. 
+
+* Domain Name - d2695c9s1plgbl.cloudfront.net 
+* Origin - udemy-cloudguru-aws.s3.amazonaws.com
+
+* Edit Geo-Restricitons (Whitelist - allow, Blacklist - restrict)
