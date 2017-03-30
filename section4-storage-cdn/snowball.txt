@@ -1,0 +1,12 @@
+Snowball
+
+* AWS Import/Export Disk accelerattes moving large amounts of data ino and out of the AWS cloud portable storage devices for transport. It transfers your data directly onto and off of storage devices using AWS' high speed internal network and bypassing the internet.
+
+* 3 types of Snowball
+1. Snowball
+2. Snowball Edge
+3. Snowmobile
+
+* Snowball is petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data into and out of AWS. 1/5th the cost of high speed internet. 80TB snowball in all regions. Uses multip layers of security designed to protect your data including tamper-resistant enclosures, 256-bit encryption, and an industry standard Trusted Platform Module (TPM) designed to ensure both security and full chain of custody of your data. Once the data transfer job has been processed and verified, AWS performs a software erasure of the Snowball appliance.
+
+ 
