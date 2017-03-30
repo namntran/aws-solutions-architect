@@ -1,0 +1,9 @@
+S3 Transfer Acceleration
+
+* utilises the CloudFront Edge Network to accelerate your uploads to S3. Instead of uploading directly to S3 bucket, you can use distinct URL to upload directly to an edge location which will then transfer that file to S3. You will get a distinct URL to upload to: acloudgure.S3-accelerate.amazonaws.com
+
+* go to bucket name, properties, then Transfer Acceleration.
+
+* will cost more money, can compare with speed comparison and distance from your bucket.
+
+* if majority of users in same region of your bucket, the advantages may be minimal.
