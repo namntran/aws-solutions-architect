@@ -1,0 +1,64 @@
+EC2 101 - PART 2
+
+Elastic Block Store (EBS)
+
+* EBS allows you to create storage volumes and attach them to EC2 instances. Once attached, you can create a file system on top of these volumes, run a database, or use them in any other way you would use a block device. EBS volumes are placed in a specific Availability Zone, where they are automatically replicated to protect you from the failure of a single component.
+
+EBS Volume Types
+* General Purpose SSD (GP2)
+  - General purpose, balances both price and performance
+  - Ratio of 3 IOPS per GB with up to 10,000 IOPS and the ability to burst up to 3000 IOPS for extended periods of time for volumes under 1 GB.
+
+* Provisioned IOPS SSD (I01)
+  - Designed for I/O intensive application such as large relation or NoSQL databases
+  - Use if you need more than 10,000 IOPS
+  - Can provision up to 20,000 IOPS per volume
+
+  (magnetic disks - sequential data)
+* Throughput Optimized HDD (ST1)
+  - Big data
+  - Data warehouses
+  - Log processing
+  - Cannot be a boot volume 
+
+* Cold HDD (SC1)
+  - Lowest Cost Storage for infrequently accessed workloads
+  - File Server
+  - Cannot be a boot volume
+
+* Magnetic (Standard)
+  - Lowest cost per GB of all EBS volume types that is bootable. Magnetic volumes are ideal for workloads where data is accessed infrequently, and applications where the lowest storage cost is important
+
+Sections
+* Launch an EC2 instance
+* Security Group Basics
+* Volumes and Snapshots
+* Create an Amazon Machine Image (AMI)
+* Load Balancers and Health Checks
+* Cloud Watch
+* AWS Command Line
+* IAM Roles with EC2
+* Bootstrap Scripts
+* Launch Configuration Groups
+* Autoscaling 101
+* Elastic File Systems (EFS)
+* Lambda - Brief overview! (bonus create an Alexa Skill Lab)
+* High Performance Compute (HPC) & Placement Groups
+
+Exam Tips
+* Know the differences between:
+  - On Demand
+  - Spot
+  - Reserved
+  - Dedicated Hosts
+
+* Remember with spot instances;
+  - If you terminate the instance, you pay for the hour
+  - If AWS terminates the spot instance, you get the hour it was terminated in for free.
+
+* EBS consists of
+  1. SSD - General Purpose - GP2 (Up to 10,000 IOPS)
+  2. SSD - Provisioned IOPS - I01 - (More than 10,000 IOPS)
+  3. HDD - Throughput Optimized - ST1 - frequently accessed workloads (not bootable)
+  4. HDD - Cold - SC1 - less frequently accessed data (not bootable)
+  5. HDD - Magnetic - Standard - cheap, infrequently accessed storage
