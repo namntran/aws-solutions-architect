@@ -62,3 +62,17 @@ Exam Tips
   3. HDD - Throughput Optimized - ST1 - frequently accessed workloads (not bootable)
   4. HDD - Cold - SC1 - less frequently accessed data (not bootable)
   5. HDD - Magnetic - Standard - cheap, infrequently accessed storage
+
+* You can't mount 1 EBS volume to multiple EC2 instances, instead use EFS.
+
+EC2 Instance Types
+* D for Density
+* R for RAM
+* M - main choice for general purpose appas
+* C for Compute
+* G for Graphics
+* I for IOPS
+* F for FPGA
+* T cheap general purpose (think T2 Micro)
+* P - Graphics (think Pics)
+* X - Extreme Memory
