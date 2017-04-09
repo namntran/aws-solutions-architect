@@ -1,3 +1,41 @@
 Launch an EC2 Instance (Lab)
 
-* 1 subnet = 1 availability zone
+* choose region closest to you (Sydney)
+* Use T2 micros
+* >Services > Compute > EC2
+* "Launch Instance"
+* Amazon Linux AMI (Amazon Machine Image) - free tier
+  - HVM 
+  - PV - para virtual
+* VPC - Virtual Private Cloud (virtual data center) - need to create VPCs from memory
+* 1 subnet (site or address block range) = 1 availability zone
+
+* Volume - virtual hard disk
+  - Root - where you will boot your operating system from
+
+* Exam Topic - What happens if you delete an EC2 instance, what happens to the EBS volume attached to that EC2 instance? By default, it will be deleted.
+ (EBS volumes persist independently from the running life of an EC2 instance. However, you can choose to automatically delete an EBS volume when the associated instance is terminated.)
+
+* Tags - help control costs by attributing tags to cost centres
+
+* Configure Security Group - virtual firewall
+
+2 Different Types of Status Checks
+* System Status Checks - These checks monitor the AWS systems required to use this instance and ensure they are functioning properly.
+
+This check verifies that your instance is reachable. We test that we are able to get network packets to your instance.
+If this check fails, there may be an issue with the infrastructure hosting your instance (such as AWS power, networking or software systems). You may need to restart or replace the instance, wait for our systems to resolve the issue, or seek technical support.
+This check does not validate that your operating system and applications are accepting traffic.
+
+* Instance Status Checks - These checks monitor your software and network configuration for this instance.
+
+This check verifies that your instance's operating system is accepting traffic.
+If this check fails, you may need to reboot your instance or make modifications to your operating system configuration.
+
+Lab Summary
+* Termination Protection is turned off by default, you must turn it on.
+* On an EBS-backed instance, the default action is for the root EBS volume to be deleted when the instance is terminated.
+* EBS Root Volumes of your DEFAULT AMI's can't be encrypted. You can also use a third party tool (such as bit locker etc) to encrypt the root volume, or this can be down when creating AMI's in the AWS console or using the API.
+* Additional volumes can be encrypted.
+
+
