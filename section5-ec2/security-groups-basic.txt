@@ -1,0 +1,29 @@
+Security Groups Lab
+
+* A security group is a virtual firewall
+ - controls traffic to your instances
+ - 1 instance can have multiple security groups
+ - add rules to each security groups that allows traffic to instances
+
+* any rule you make to security group happens immediately
+
+* security groups are stateful - any inbound rules would automatically add outbound rules
+
+SUMMARY
+* all inbound traffic is blocked by default
+
+* all outbound traffic is allowed
+
+* changes to security groups take effect immediately
+
+* you can have any number of EC2 instances within a security group
+
+* you can have multiple security groups attached to EC2 instances
+
+* security groups are STATEFUL
+  - If you create an inbound rule allowing traffic in, that traffic is automatically allowed back out again.
+
+* you can't block specific IP addresses using security groups, instead use Network Access Control Lists
+
+* you can specify allow rules, but not deny rules (by default, nothing is allowed)
+
