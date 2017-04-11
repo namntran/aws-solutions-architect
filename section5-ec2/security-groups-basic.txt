@@ -21,9 +21,52 @@ SUMMARY
 * you can have multiple security groups attached to EC2 instances
 
 * security groups are STATEFUL
-  - If you create an inbound rule allowing traffic in, that traffic is automatically allowed back out again.
+  - If you create an inbound rule allowing traffic in (e.g HTTP, SSH, HTTPS etc), it automatically adds an outbound rule (that outbound traffic is automatically allowed back out again).
+
+* explain the difference between a security groups (STATEFUL) and network access control (STATELESS)? 
 
 * you can't block specific IP addresses using security groups, instead use Network Access Control Lists
 
 * you can specify allow rules, but not deny rules (by default, nothing is allowed)
+
+* in terminal, change directory to Downloads/ SSH, then enter:
+
+  $ ssh ec2-user@[IPv4 Public IP] -i MyEC2KeyPair.pem
+
+  __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2017.03-release-notes/
+2 package(s) needed for security, out of 2 available
+Run "sudo yum update" to apply all updates.
+
+* elevate privileges to root
+  
+  $ sudo su
+
+* yum update
+
+  $ yum update -y
+
+* install apache
+
+  $ yum install httpd -y
+
+* start appache service
+
+  $ service httpd start
+
+* make sure apache server starts automatically every time we boot our EC2 instance
+
+  $ chkconfig httpd on
+
+* change directory
+
+  $ cd /var/www/html
+  $ nano index.html  #nano is text editor 
+
+
+
+
 
