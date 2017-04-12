@@ -1,2 +1,79 @@
-Volumes and Snapshots
+Volumes and Snapshots Lab
+
+* create new volume
+
+* in terminal, change directory to Downloads/ SSH, then enter:
+
+  $ ssh ec2-user@[IPv4 Public IP] -i MyEC2KeyPair.pem
+
+  __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2017.03-release-notes/
+2 package(s) needed for security, out of 2 available
+Run "sudo yum update" to apply all updates.
+
+* elevate privileges to root
+  
+  $ sudo su
+
+* list all virtual disks
+
+  $lsblk
+
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+xvda    202:0    0    8G  0 disk 
+└─xvda1 202:1    0    8G  0 part /
+xvdf    202:80   0  500G  0 disk 
+
+* check if volume has any data on it
+
+  $ file -s /dev/xvdf
+
+* currently raw storage, need to format. need to make filesystem, type, file system in linux, mount point
+
+  $ mkfs -t ext4 /dev/xvdf
+
+* need to mount the disk to the path, and to the directory
+
+  $ mount /dev/xvdf /myfileserver 
+
+* change directory to file server
+
+  $ cd /myfileserver
+
+* create a file
+
+  $ nano index.html
+
+* unmount disk
+
+  $ umount /dev/xvdf
+
+[root@ip-172-31-13-230 /]# lsblk
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+xvda    202:0    0    8G  0 disk 
+└─xvda1 202:1    0    8G  0 part /
+xvdf    202:80   0  500G  0 disk /myfileserver
+
+[root@ip-172-31-13-230 /]# umount /dev/xvdf
+[root@ip-172-31-13-230 /]# lsblk
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+xvda    202:0    0    8G  0 disk 
+└─xvda1 202:1    0    8G  0 part /
+xvdf    202:80   0  500G  0 disk 
+
+* In AWS console, detach volume. Then Create Snapshot of volume.
+
+* Snapshots are a point in time (photographs) of the virtual hard disk. This snapshot will be stored on S3. Every time you take a new snapshot, only the data that is change is stored on S3. So it's incremental updates. Every snapshot won't be storing 500 GB, only the changed data.
+
+SUMMARY
+ 
+* Volumes exist on Elastic Block Storage (EBS)
+  - EBS Volume are virtual hard disk attached to EC2 instance
+  - Root device volume is volume that an operating system is installed on to (Linux, Windows)
+  - Snapshots exist on S3
+  - Snapshots are point in time copies of Volumes (taking a photo of the disk)
+  - Snapshots are incremental, this means that only the blocks that have changed since your last snapsot are moved to S3.
 
