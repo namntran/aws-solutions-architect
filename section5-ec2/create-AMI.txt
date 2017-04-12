@@ -1,0 +1,23 @@
+AMI - Amazon Machine Image
+Encrypted Root Device
+Volumes & Snapshots - Lab
+
+* EC2 Dashboard - Stop Instance, Create Snapshot 'MyRootDeviceVolume'
+
+* In Snapshot menu, copy snapshot to different region
+
+* AMIs are not encrypted at REST, encryption key is held in your AWS account (always private)
+
+SUMMARY
+
+* To create a snapshot for Amazon EBS volumes that serve as root devices, you should stop the instance before taking the snapshot.
+
+* Snapshots of encrypted volumes are encrypted automatically.
+
+* You can share snapshots, but only if they are unecrypted.
+  - These snapshots can be shared with other AWS accounts or made public. 
+
+* Case scenario and real world - create a web server with all your programs configured to your specifications(apache, security, base web code installed etc). You can create a snapshot of this base image, then promote that snapshot to an Amazon Machine Image, and boot similar web servers. 
+
+So next time you provision an EC2 image, you won't need to install programs (apache, security etc).
+
