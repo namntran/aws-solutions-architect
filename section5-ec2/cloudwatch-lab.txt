@@ -1,0 +1,55 @@
+CloudWatch Lab
+
+* Already used it when we created a billing alarm alert over $10
+
+* CoudWatch > Management Tools
+
+* EXAM TOPIC - what metrics are available by default for your EC2 instance?
+
+  * CPU
+    - credit balance
+    - usage
+    - utilisation
+  * Disk
+    - read bytes
+    - write bytes
+    - read ops
+    - write ops
+  * Network
+    - in
+    - out
+    - packet in
+    - packet out
+  * Status check 
+    - testing at instance level (is virtual machine up?) 
+    - testing at a host level (is that hypervisor that's running the virtual machine up?)
+
+* no RAM, need to create a custom metric (write code and upload to EC2)
+
+* CloudWatch Events helps you to respond to state changes in your AWS resources. When your resources change state they automatically send events into an event stream. You can create rules that match selected events in the stream and route them to targets to take action. You can also use rules to take action on a pre-determined schedule.
+
+* CloudWatch Logs helps you to aggregate, monitor, and store logs. For example, you can:
+  - Monitor HTTP response codes in Apache logs
+  - Receive alarms for errors in kernel logs
+  - Count exceptions in application logs
+
+* EXAM TIPS
+
+* Standard Monitoring = 5 minutes
+
+* Detailed Monitoring = 1 minute
+
+What can I do with CloudWatch?
+
+* Dashboards - Creates awesome dashboards to see what is happening with your AWS environment.
+
+* Alarms - allows you to set Alarms that notify you when particular thresholds are hit
+
+* Events - CloudWatch Events helps you to respond to state changes in your AWS resources
+
+* Logs - CloudWatch Logs helps you to aggregate, monitor and store logs.
+
+* Difference between CloudWatch and CloudTrail?
+
+  - CloudWatch is for logging and monitoring, performance monitoring of resources (e.g CPU Utilisation)
+  - CloudTrail is for auditing, creates an audit trail (monitor your AWS environment, new users/ roles/ S3 bucket)
