@@ -1,0 +1,32 @@
+Load Balancers and Health Checks - Lab
+
+* Load balancer is a virtual appliance that spreads the load of your traffic across your different web servers.
+
+* 2 types of load balancers
+
+1. Application Load Balancer
+  - service that operates at the application layer and allows you to define routing rules based on content across multiple services or containers running on one or more Amazon Elastic Compute Cloud (Amazon EC2) instances
+  - work at layer 7 -  application layer
+  - preferred method for HTTP/HTTPS
+  - clever routing
+  - supports path-based routing, and can route requests to one or more ports on each EC2 instance or container instance in your VPC.
+
+2. Classic Load Balancer
+  - makes routing decisions at either the transport layer (TCP/SSL) or the application layer (HTTP/HTTPS), and supports either EC2-Classic or a VPC.
+  - layer 4 - decisions/ routing at TCP layer
+
+  * one subnet is one availability zone
+
+  SUMMARY
+
+  * Instances monitored by ELB are reported as (depending on healthy thresholds); 
+    - InService
+    - OutofService
+
+  * Health Checks check the instance health by talking to it (healthindex.html)
+
+  * Have their own DNS name. You are never given an IP address.
+
+  * Read the ELB FAQ for Classic Load Balancers.
+
+  
