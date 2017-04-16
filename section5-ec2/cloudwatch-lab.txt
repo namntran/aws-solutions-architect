@@ -52,4 +52,4 @@ What can I do with CloudWatch?
 * Difference between CloudWatch and CloudTrail?
 
   - CloudWatch is for logging and monitoring, performance monitoring of resources (e.g CPU Utilisation)
-  - CloudTrail is for auditing, creates an audit trail (monitor your AWS environment, new users/ roles/ S3 bucket)
+  - CloudTrail is for auditing, creates an audit trail (monitor your AWS environment, new users/ roles/ S3 bucket)a

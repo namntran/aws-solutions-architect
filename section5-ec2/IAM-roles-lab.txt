@@ -1,0 +1,21 @@
+Identity Access Management Roles Lab
+
+*create an EC2 instance with a role
+
+* security risk storing your credentials locally on an EC2 instance.
+
+* Amazon blog 9 Feb 2017 - Attach an AWS IAM Role to an existing Amazon EC2 instance by using the AWS CLI
+
+* can attach IAM role to EC2 through command line, not console
+
+SUMMARY
+
+* Roles are more secure than storing your access key and secret access key on individual EC2 instances
+
+*  IAM roles cannot make direct requests to AWS services; they are meant to be assumed by authorized entities, such as IAM users, applications, or AWS services such as EC2. Use IAM roles to delegate access within or between AWS accounts.
+
+*  Roles are easier to manage. Assign a role to an EC2 instance, you can then change permissions of that role afterwards. You don't have to worry about managing access keys. 
+
+* Roles can be assigned to an EC2 instance after it is created, but currently only using the command line.
+
+* Roles are universal, you can use them in any region
