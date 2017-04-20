@@ -1,2 +1,4 @@
 Bash Scripting Lab
 
+* bash script is a list of AWS command line that will be run when your EC2 instance first starts up. You provide it in a script (e.g install Apache, kernal updates, install PHP, mySQL)
+
