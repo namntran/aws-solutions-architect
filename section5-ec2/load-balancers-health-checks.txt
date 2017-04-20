@@ -1,0 +1,12 @@
+Load Balancers & Health Checks
+
+* ssh ec2-user@[00.000.000.000] -i MyEC2KeyPair.pem #SSH into public domain
+
+$ service httpd status
+
+$ service httpd start
+
+$ yum install httpd -y
+
+$ service httpd start
+
