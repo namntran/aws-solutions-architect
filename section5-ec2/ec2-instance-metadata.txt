@@ -1,0 +1,39 @@
+EC2 Instance Metadata
+
+* data about EC2 instance (e.g. public and private IP addresses), and how to access this data from the command line
+
+* create new instance (name: metada), SSH into instance
+
+**EXAM TOPIC - remember URL**
+
+$ curl http://169.254.169.254/latest/meta-data/
+
+ami-id
+ami-launch-index
+ami-manifest-path
+block-device-mapping/
+hostname
+iam/
+instance-action
+instance-id
+instance-type
+local-hostname
+local-ipv4
+mac
+metrics/
+network/
+placement/
+profile
+public-hostname
+public-ipv4                 # public IP address
+public-keys/
+reservation-id
+security-groups
+
+$ curl http://169.254.169.254/latest/meta-data/public-ipv4
+
+$ curl http://169.254.169.254/latpublic-ipv4 > mypublicip.html      # print IP address to html
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    14  100    14    0     0   5325      0 --:--:-- --:--:-- --:--:--  7000
