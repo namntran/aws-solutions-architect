@@ -21,13 +21,13 @@ Launch an EC2 Instance (Lab)
 * Configure Security Group - virtual firewall
 
 2 Different Types of Status Checks
-* System Status Checks - These checks monitor the AWS systems required to use this instance and ensure they are functioning properly.
+1. System Status Checks - These checks monitor the AWS systems required to use this instance and ensure they are functioning properly.
 
 This check verifies that your instance is reachable. We test that we are able to get network packets to your instance.
 If this check fails, there may be an issue with the infrastructure hosting your instance (such as AWS power, networking or software systems). You may need to restart or replace the instance, wait for our systems to resolve the issue, or seek technical support.
 This check does not validate that your operating system and applications are accepting traffic.
 
-* Instance Status Checks - These checks monitor your software and network configuration for this instance.
+2. Instance Status Checks - These checks monitor your software and network configuration for this instance.
 
 This check verifies that your instance's operating system is accepting traffic.
 If this check fails, you may need to reboot your instance or make modifications to your operating system configuration.

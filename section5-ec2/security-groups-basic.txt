@@ -5,7 +5,7 @@ Security Groups Lab
  - 1 instance can have multiple security groups
  - add rules to each security groups that allows traffic to instances
 
-* any rule you make to security group happens immediately
+* any rule you make to a security group applies immediately
 
 * security groups are stateful - any inbound rules would automatically add outbound rules
 
