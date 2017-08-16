@@ -7,7 +7,7 @@ Security Groups Lab
 
 * any rule you make to a security group applies immediately
 
-* security groups are stateful - any inbound rules would automatically add outbound rules
+* security groups are stateful (HTTP,SSH,HTTPS,RDP) - any inbound rules would be automatically added to outbound rules
 
 SUMMARY
 * all inbound traffic is blocked by default
@@ -23,7 +23,8 @@ SUMMARY
 * security groups are STATEFUL
   - If you create an inbound rule allowing traffic in (e.g HTTP, SSH, HTTPS etc), it automatically adds an outbound rule (that outbound traffic is automatically allowed back out again).
 
-* explain the difference between a security groups (STATEFUL) and network access control (STATELESS)? 
+Key exam/ interview question:
+* explain the difference between a security groups (STATEFUL) and network access control lists are (STATELESS)? 
 
 * you can't block specific IP addresses using security groups, instead use Network Access Control Lists
 
@@ -33,7 +34,7 @@ SUMMARY
 
   $ ssh ec2-user@[IPv4 Public IP] -i MyEC2KeyPair.pem
 
-  __|  __|_  )
+       __|  __|_  )
        _|  (     /   Amazon Linux AMI
       ___|\___|___|
 
